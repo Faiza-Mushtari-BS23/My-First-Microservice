@@ -45,4 +45,8 @@ public class CustomerController {
     public CustomerResponse getCustomerById(@PathVariable Long id) {
         return customerService.getCustomerById(id);
     }
+
+    @GetMapping("/hello")
+    @ResponseStatus(HttpStatus.OK)
+    public String sayHello() { return "Hello, customer!"; }
 }
